@@ -1,0 +1,34 @@
+{
+  "name": "nintendo-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --verbose --runInBand --testLocationInResults",
+    "test:watch": "npm run test -- --watch",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "globalSetup": "alchemy-jest-slack-reporter/setup.js",
+    "globalTeardown": "alchemy-jest-slack-reporter/teardown.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "alchemy-jest-slack-reporter": "^1.3.0",
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1",
+    "mongodb-memory-server": "^6.6.0",
+    "nodemon": "^2.0.3",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13"
+  }
+}
