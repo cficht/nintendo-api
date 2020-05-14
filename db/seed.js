@@ -5,11 +5,11 @@ const { getAllCharacters } = require('../lib/services/characterApi');
 const Character = require('../lib/models/Character');
 
 const series = [
-  // 'Mario_characters',
-  // 'The_Legend_of_Zelda_characters',
-  // 'Star_Fox_characters',
-  // 'Metroid_characters',
-  // 'Kirby_characters',
+  'Mario_characters',
+  'The_Legend_of_Zelda_characters',
+  'Star_Fox_characters',
+  'Metroid_characters',
+  'Kirby_characters',
   'Animal_Crossing_characters',
   'Pikmin_characters'
 ];
