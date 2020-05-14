@@ -8,9 +8,9 @@ Eventual Description
 
 ### Done
 // FIXED QUOTES
+// DESCRIPTION?
 
 ### Next
-- [] DESCRIPTION?
 - [] /RANDOM ROUTE
 - [] SORT ALL BY NAME
 - [] NO RANDOM FOR SERIES ROUTES
