@@ -3,7 +3,7 @@ const { getCharacters } = require('../db/data-helpers');
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('character routes', () => {
+describe('character routes', (done) => {
   it('can get all characters', async() => {
     const characters = await getCharacters();
     return request(app)
@@ -20,6 +20,7 @@ describe('character routes', () => {
           image: characters[0].image,
           description: characters[0].description
         });
+        done();
       });
   });
 
