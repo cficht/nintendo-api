@@ -4,8 +4,8 @@ const request = require('supertest');
 const app = require('../lib/app');
 
 describe('character routes', () => {
-  it('can get all characters', async(done) => {
-    const characters = await getCharacters();
+  it('can get all characters', (done) => {
+    const characters = getCharacters();
     return request(app)
       .get('/api/v1/characters')
       .then(res => {
