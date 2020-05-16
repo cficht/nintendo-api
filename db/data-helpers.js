@@ -7,13 +7,8 @@ beforeAll(() => {
   connect();
 });
 
-// afterAll(() => {
-//   return mongoose.connection.close();
-// });
-
-afterAll(async done => {
-  await mongoose.connection.close();
-  done();
+afterAll(() => {
+  return mongoose.connection.close();
 });
 
 const prepare = model => JSON.parse(JSON.stringify(model));
