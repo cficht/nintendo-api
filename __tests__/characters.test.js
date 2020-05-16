@@ -1,4 +1,5 @@
-const { getCharacter, getCharacters } = require('../db/data-helpers');
+const { getCharacters } = require('../db/data-helpers');
+const Character = require('../lib/models/Character');
 
 const request = require('supertest');
 const app = require('../lib/app');
@@ -10,8 +11,8 @@ describe('character routes', () => {
       .get('/api/v1/characters')
       .then(res => {
         expect(res.body).toHaveLength(20);
-        expect(res.body).toContainEqual({
-          _id: characters[0]._id,
+        expect(res.body[0]).toEqual({
+          _id: expect.any(String),
           name: characters[0].name,
           first_appearance: characters[0].first_appearance,
           quote: characters[0].quote,
@@ -32,12 +33,12 @@ describe('character routes', () => {
   });
 
   it('gets a character by id', async() => {
-    const character = await getCharacter();
+    const character = await Character.findOne({ name: 'Baby Mario' });
     return request(app)
       .get(`/api/v1/characters/${character._id}`)
       .then(res => {
         expect(res.body).toEqual({
-          _id: character._id,
+          _id: expect.any(String),
           name: character.name,
           first_appearance: character.first_appearance,
           quote: character.quote,
@@ -50,30 +51,62 @@ describe('character routes', () => {
   });
 
   it('can get mario characters', async() => {
-    const characters = await getCharacters({ search_type: 'Mario_characters' });
+    const characters = await Character.find({ search_type: 'Mario_characters' });
     const charactersMunged = characters.map(character => {
-      delete character.search_type;
-      delete character.__v;
-      return character;
+      return ({
+        _id: character._id,
+        name: character.name,
+        first_appearance: character.first_appearance,
+        quote: character.quote,
+        species: character.species,
+        creator: character.creator,
+        image: character.image,
+        description: character.description
+      });
     });
     return request(app)
       .get('/api/v1/characters/mario')
       .then(res => {
-        expect(res.body[0]).toEqual(charactersMunged[0]);
+        expect(res.body[0]).toEqual({ 
+          _id: expect.any(String),
+          name: charactersMunged[0].name,
+          first_appearance: charactersMunged[0].first_appearance,
+          quote: charactersMunged[0].quote,
+          species: charactersMunged[0].species,
+          creator: charactersMunged[0].creator,
+          image: charactersMunged[0].image,
+          description: charactersMunged[0].description 
+        });
       });
   });
 
   it('can get zelda characters', async() => {
-    const characters = await getCharacters({ search_type: 'The_Legend_of_Zelda_characters' });
+    const characters = await Character.find({ search_type: 'The_Legend_of_Zelda_characters' });
     const charactersMunged = characters.map(character => {
-      delete character.search_type;
-      delete character.__v;
-      return character;
+      return ({
+        _id: character._id,
+        name: character.name,
+        first_appearance: character.first_appearance,
+        quote: character.quote,
+        species: character.species,
+        creator: character.creator,
+        image: character.image,
+        description: character.description
+      });
     });
     return request(app)
       .get('/api/v1/characters/zelda')
       .then(res => {
-        expect(res.body[0]).toEqual(charactersMunged[0]);
+        expect(res.body[0]).toEqual({ 
+          _id: expect.any(String),
+          name: charactersMunged[0].name,
+          first_appearance: charactersMunged[0].first_appearance,
+          quote: charactersMunged[0].quote,
+          species: charactersMunged[0].species,
+          creator: charactersMunged[0].creator,
+          image: charactersMunged[0].image,
+          description: charactersMunged[0].description 
+        });
       });
   });
 
@@ -86,12 +119,12 @@ describe('character routes', () => {
   });
 
   it('gets a character by name', async() => {
-    const character = await getCharacter({ name: 'Baby Mario' });
+    const character = await Character.findOne({ name: 'Baby Mario' });
     return request(app)
       .get(`/api/v1/characters/?search=${character.name}`)
       .then(res => {
         expect(res.body[0]).toEqual({
-          _id: character._id,
+          _id: expect.any(String),
           name: character.name,
           first_appearance: character.first_appearance,
           quote: character.quote,
