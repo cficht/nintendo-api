@@ -24,6 +24,7 @@ Eventual Description
 
 ### Next
 
+- [] TEST DATA AND TEST SEED FUNCTION
 - [] GAMES SEED
 - [] GAMES MODEL
 - [] GAMES ROUTE

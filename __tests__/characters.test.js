@@ -10,8 +10,8 @@ describe('character routes', () => {
       .get('/api/v1/characters')
       .then(res => {
         expect(res.body).toHaveLength(20);
-        expect(res.body).toContainEqual({
-          _id: characters[0]._id,
+        expect(res.body[0]).toEqual({
+          _id: expect.any(String),
           name: characters[0].name,
           first_appearance: characters[0].first_appearance,
           quote: characters[0].quote,
