@@ -84,4 +84,22 @@ describe('character routes', () => {
         expect(res.body).toHaveLength(20);
       });
   });
+
+  it('gets a character by name', async() => {
+    const character = await getCharacter({ name: 'Baby Mario' });
+    return request(app)
+      .get(`/api/v1/characters/?search=${character.name}`)
+      .then(res => {
+        expect(res.body[0]).toEqual({
+          _id: character._id,
+          name: character.name,
+          first_appearance: character.first_appearance,
+          quote: character.quote,
+          species: character.species,
+          creator: character.creator,
+          image: character.image,
+          description: character.description
+        });
+      });
+  });
 });
