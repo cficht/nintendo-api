@@ -3,8 +3,8 @@ const { getCharacters } = require('../db/data-helpers');
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('character routes', (done) => {
-  it('can get all characters', async() => {
+describe('character routes', () => {
+  it('can get all characters', async(done) => {
     const characters = await getCharacters();
     return request(app)
       .get('/api/v1/characters')
