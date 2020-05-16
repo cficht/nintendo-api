@@ -6,6 +6,9 @@ const fs = require('fs');
 beforeAll(() => {
   connect();
 });
+beforeEach(() => {
+  jest.setTimeout(10000);
+});
 
 afterAll(() => {
   return mongoose.connection.close();

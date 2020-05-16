@@ -5,21 +5,21 @@ const app = require('../lib/app');
 
 describe('character routes', () => {
   it('can get all characters', async(done) => {
-    // const characters = await getCharacters();
+    const characters = await getCharacters();
     return request(app)
       .get('/api/v1/characters')
       .then(res => {
         expect(res.body).toHaveLength(20);
-        // expect(res.body).toContainEqual({
-        //   _id: characters[0]._id,
-        //   name: characters[0].name,
-        //   first_appearance: characters[0].first_appearance,
-        //   quote: characters[0].quote,
-        //   species: characters[0].species,
-        //   creator: characters[0].creator,
-        //   image: characters[0].image,
-        //   description: characters[0].description
-        // });
+        expect(res.body).toContainEqual({
+          _id: characters[0]._id,
+          name: characters[0].name,
+          first_appearance: characters[0].first_appearance,
+          quote: characters[0].quote,
+          species: characters[0].species,
+          creator: characters[0].creator,
+          image: characters[0].image,
+          description: characters[0].description
+        });
         done();
       });
   });

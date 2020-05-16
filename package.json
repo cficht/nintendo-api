@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest --verbose --runInBand --testLocationInResults",
+    "test": "jest --verbose --runInBand --testLocationInResults --detectOpenHandles",
     "test:watch": "npm run test -- --watch",
     "start": "node server.js",
     "start:watch": "nodemon server.js",
