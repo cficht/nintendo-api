@@ -4,10 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest --verbose --runInBand --testLocationInResults",
+    "test": "jest --verbose --runInBand --testLocationInResults --detectOpenHandles",
     "test:watch": "npm run test -- --watch",
     "start": "node server.js",
-    "start:watch": "nodemon server.js"
+    "start:watch": "nodemon server.js",
+    "seed-characters": "node db/seed-characters.js",
+    "seed-games": "node db/seed-games.js"
   },
   "jest": {
     "testEnvironment": "node",
@@ -27,6 +29,8 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.13"
