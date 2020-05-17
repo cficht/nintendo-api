@@ -34,10 +34,8 @@ Eventual Description
 
 ### Next
 
-
 - [] README/DOC
 - [] HOMEPAGE
-
 
 ROUTES:
 Mario
@@ -49,4 +47,4 @@ Animal Crossing
 Donkey Kong
 F-Zero
 Splatoon
-EarthBound
+Mother
