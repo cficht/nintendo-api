@@ -1,4 +1,4 @@
-const { getCharacters } = require('../db/data-helpers');
+const { getCharacters } = require('../db/test-data/data-helpers');
 const Character = require('../lib/models/Character');
 
 const request = require('supertest');

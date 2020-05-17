@@ -1,4 +1,4 @@
-const { getGames } = require('../db/data-helpers');
+const { getGames } = require('../db/test-data/data-helpers');
 const Game = require('../lib/models/Game');
 
 const request = require('supertest');
@@ -65,7 +65,7 @@ describe('game routes', () => {
       });
     });
     return request(app)
-      .get('/api/v1/games/starfox')
+      .get('/api/v1/games/star_fox')
       .then(res => {
         expect(res.body[0]).toEqual({ 
           _id: expect.any(String),
@@ -95,7 +95,7 @@ describe('game routes', () => {
       });
     });
     return request(app)
-      .get('/api/v1/games/ac')
+      .get('/api/v1/games/animal_crossing')
       .then(res => {
         expect(res.body[0]).toEqual({ 
           _id: expect.any(String),

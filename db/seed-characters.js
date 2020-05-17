@@ -11,7 +11,11 @@ const series = [
   'Metroid_characters',
   'Kirby_characters',
   'Animal_Crossing_characters',
-  'Pikmin_characters'
+  'Donkey_Kong_characters',
+  'Pikmin_characters',
+  'Splatoon_characters',
+  'F-Zero_pilots',
+  'EarthBound_characters'
 ];
 
 const seedCharacters = async(series) => {

@@ -11,7 +11,11 @@ const gameSeries = [
   'Metroid_games',
   'Kirby_games',
   'Animal_Crossing_games',
-  'Pikmin_games'
+  'Donkey_Kong_games',
+  'Pikmin_games',
+  'Splatoon_games',
+  'F-Zero_games',
+  'Mother_games'
 ];
 
 const seedGames = async(gameSeries) => {

@@ -28,7 +28,23 @@ Eventual Description
 // GAMES ROUTES
 // REORDER CHARACTER MODEL
 // GAMES ROUTE TESTING
+// Series Choices
+// Name Routes
+// Finalize Fields
 
 ### Next
+
 - [] README/DOC
 - [] HOMEPAGE
+
+ROUTES:
+Mario
+Zelda
+Star Fox
+Metroid
+Kirby
+Animal Crossing
+Donkey Kong
+F-Zero
+Splatoon
+Mother
