@@ -1,5 +1,5 @@
 require('dotenv').config();
-const connect = require('../lib/utils/connect');
+const connect = require('../../lib/utils/connect');
 const mongoose = require('mongoose');
 const { characterData, gameData } = require('./seed-test');
 
