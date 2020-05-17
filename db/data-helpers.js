@@ -1,7 +1,7 @@
 require('dotenv').config();
 const connect = require('../lib/utils/connect');
 const mongoose = require('mongoose');
-const seedData = require('./seed-test');
+const { characterData, gameData } = require('./seed-test');
 
 beforeAll(() => {
   connect();
@@ -12,9 +12,12 @@ beforeEach(() => {
 });
 
 let testCharacters = null;
+let testGames = null;
 beforeEach(async() => {
-  const seedCharacters = await seedData();
+  const seedCharacters = await characterData();
+  const seedGames = await gameData();
   testCharacters = seedCharacters;
+  testGames = seedGames;
 });
 
 afterAll(() => {
@@ -22,5 +25,6 @@ afterAll(() => {
 });
 
 module.exports = {
-  getCharacters: () => testCharacters
+  getCharacters: () => testCharacters,
+  getGames: () => testGames
 };

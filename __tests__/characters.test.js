@@ -112,9 +112,9 @@ describe('character routes', () => {
 
   it('can get random characters of a length of 5', async() => {
     return request(app)
-      .get('/api/v1/characters/random')
+      .get('/api/v1/characters/random?count=5')
       .then(res => {
-        expect(res.body).toHaveLength(20);
+        expect(res.body).toHaveLength(5);
       });
   });
 
