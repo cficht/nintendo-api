@@ -14,9 +14,10 @@ const series = [
   'Pikmin_characters'
 ];
 
-const seedCharacters = (series) => {
+const seedCharacters = async(series) => {
   connect();
-  mongoose.connection.dropDatabase();
+  const checkChars = await (Character.exists());
+  if(checkChars) Character.collection.drop();
   return getAllCharacters(series)
     .then(characters => Character.create(characters))
     .finally(() => mongoose.connection.close())

@@ -8,7 +8,8 @@
     "test:watch": "npm run test -- --watch",
     "start": "node server.js",
     "start:watch": "nodemon server.js",
-    "seed": "node db/seed.js"
+    "seed-characters": "node db/seed-characters.js",
+    "seed-games": "node db/seed-games.js"
   },
   "jest": {
     "testEnvironment": "node",
