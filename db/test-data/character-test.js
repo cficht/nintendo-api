@@ -5832,3 +5832,15 @@ const characters = [
 ];
 
 module.exports = characters;
+
+const obj = 
+{
+  "_id": "5ec174a4fa8ade34c1580541",
+  "name": "Super Mario 64",
+  "image": "https://vignette.wikia.nocookie.net/nintendo/images/0/0f/Super_Mario_64_%28NA%29.png/revision/latest/scale-to-width-down/310?cb=20110703064718&path-prefix=en",
+  "developer": "Nintendo EAD",
+  "publisher": "Nintendo",
+  "genre": "Platformer",
+  "platform": "Nintendo 64, Virtual Console (Wii), Virtual Console (Wii U)",
+  "description": "Super Mario 64 (also called SM64) is a platformer game developed by Nintendo EAD and published by Nintendo. The game is considered to be one of the most influential titles from the fifth generation of video games. Released in 1996 as a launch title for the Nintendo 64 alongside Pilotwings 64, which helped drive initial sales of the console. As of January 7, 2017, it has sold over 11 million copies worldwide and is marked as the best selling Nintendo 64 game of all time. It is also the second most popular game on the Wii's Virtual Console after Super Mario Bros."
+};
