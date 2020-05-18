@@ -1,5 +1,6 @@
 # Nintendo API
-Author: [Chris Ficht][http://github.com/cficht]
+Author: [Chris Ficht](http://github.com/cficht)
+
 [the-nintendo-api.herokuapp.com](https://the-nintendo-api.herokuapp.com)
 
 ## Overview
