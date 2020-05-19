@@ -3,12 +3,226 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@300;500;700&display=swap" rel="stylesheet">
   <title>The Nintendo API</title>
 </head>
 <body>
   <header>
-    <h1>The Nintendo API</h1>
+    <h1>The</h1>
+    <img src="assets/nintendo_logo.svg" id="ninten-logo" />
+    <h1>API</h1>
   </header>
-  
+  <main>
+    <article class="route-article">
+      <table><caption><h3>Character Routes</h3></caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Endpoint</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ALL</td>
+                <td>/api/v1/characters?page=${number}&perPage=${number}</td>
+                <td>get all characters</td>
+            </tr>
+            <tr>
+                <td>SEARCH</td>
+                <td>/api/v1/characters?search=${query}</td>
+                <td>search all characters by name</td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>/api/v1/characters/${id}</td>
+                <td>get a character by id</td>
+            </tr>
+            <tr>
+                <td>RANDOM</td>
+                <td>/api/v1/characters/random?count=${number}</td>
+                <td>get random characters</td>
+            </tr>
+            <tr>
+                <td>MARIO</td>
+                <td>/api/v1/characters/mario?page=${number}&perPage=${number}</td>
+                <td>get mario characters</td>
+            </tr>
+            <tr>
+                <td>ZELDA</td>
+                <td>/api/v1/characters/zelda?page=${number}&perPage=${number}</td>
+                <td>get zelda characters</td>
+            </tr>
+            <tr>
+                <td>STAR FOX</td>
+                <td>/api/v1/characters/star_fox?page=${number}&perPage=${number}</td>
+                <td>get star fox characters</td>
+            </tr>
+            <tr>
+                <td>METROID</td>
+                <td>/api/v1/characters/metroid?page=${number}&perPage=${number}</td>
+                <td>get metroid characters</td>
+            </tr>
+            <tr>
+                <td>KIRBY</td>
+                <td>/api/v1/characters/kirby?page=${number}&perPage=${number}</td>
+                <td>get kirby characters</td>
+            </tr>
+            <tr>
+                <td>ANIMAL CROSSING</td>
+                <td>/api/v1/characters/animal_crossing?page=${number}&perPage=${number}</td>
+                <td>get animal crossing characters</td>
+            </tr>
+            <tr>
+                <td>DONKEY KONG</td>
+                <td>/api/v1/characters/donkey_kong?page=${number}&perPage=${number}</td>
+                <td>get donkey kong characters</td>
+            </tr>
+            <tr>
+                <td>F-ZERO</td>
+                <td>/api/v1/characters/f-zero?page=${number}&perPage=${number}</td>
+                <td>get f-zero characters</td>
+            </tr>
+            <tr>
+                <td>SPLATOON</td>
+                <td>/api/v1/characters/splatoon?page=${number}&perPage=${number}</td>
+                <td>get splatoon characters</td>
+            </tr>
+            <tr>
+                <td>MOTHER</td>
+                <td>/api/v1/characters/mother?page=${number}&perPage=${number}</td>
+                <td>get mother characters</td>
+            </tr>           
+        </tbody>
+    </table>
+    <div class="code-div">
+      <h3>Data Format</h3>
+      <div class="pre-div">
+        <pre>
+            <code>{
+                "_id": "5ec1747230f95a34abdc76a0",
+                "name": "Mario",
+                "image": "https://vignette.wikia.nocookie.net/nintendo/images/d/d8/New_Super_Mario_Bros._U_Deluxe_-_Mario_01.png/revision/latest/scale-to-width-down/310?cb=20181226204245&path-prefix=en",
+                "first_appearance": "Donkey Kong (1981)",
+                "quote": "“It's a me, Mario!”",
+                "species": "Human",
+                "creator": "Shigeru Miyamoto",
+                "description": "Mario (originally known as Mr. Video and Jumpman and also known as Mario Mario or Super Mario) is a Nintendo video game character and the main character who stars in the long-running and highly successful Mario (series). He is the mascot character for Nintendo. He and his younger twin brother Luigi are Nintendo's most renowned characters; his games have sold over 262 million units worldwide. This and other key factors has led him to become the defining video game character and Nintendo's mascot. He was originally created by Shigeru Miyamoto for the arcade video game Donkey Kong (video game)."
+              }</code>
+        </pre>
+      </div>
+    </div>
+    </article>
+    <article class="route-article">
+      <table><caption><h3>Game Routes</h3></caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Endpoint</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ALL</td>
+                <td>/api/v1/games?page=${number}&perPage=${number}</td>
+                <td>get all games</td>
+            </tr>
+            <tr>
+                <td>SEARCH</td>
+                <td>/api/v1/games?search=${query}</td>
+                <td>search all games by name</td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>/api/v1/games/${id}</td>
+                <td>get a game by id</td>
+            </tr>
+            <tr>
+                <td>RANDOM</td>
+                <td>/api/v1/games/random?count=${number}</td>
+                <td>get random games</td>
+            </tr>
+            <tr>
+                <td>MARIO</td>
+                <td>/api/v1/games/mario?page=${number}&perPage=${number}</td>
+                <td>get mario games</td>
+            </tr>
+            <tr>
+                <td>ZELDA</td>
+                <td>/api/v1/games/zelda?page=${number}&perPage=${number}</td>
+                <td>get zelda games</td>
+            </tr>
+            <tr>
+                <td>STAR FOX</td>
+                <td>/api/v1/games/star_fox?page=${number}&perPage=${number}</td>
+                <td>get star fox games</td>
+            </tr>
+            <tr>
+                <td>METROID</td>
+                <td>/api/v1/games/metroid?page=${number}&perPage=${number}</td>
+                <td>get metroid games</td>
+            </tr>
+            <tr>
+                <td>KIRBY</td>
+                <td>/api/v1/games/kirby?page=${number}&perPage=${number}</td>
+                <td>get kirby games</td>
+            </tr>
+            <tr>
+                <td>ANIMAL CROSSING</td>
+                <td>/api/v1/games/animal_crossing?page=${number}&perPage=${number}</td>
+                <td>get animal crossing games</td>
+            </tr>
+            <tr>
+                <td>DONKEY KONG</td>
+                <td>/api/v1/games/donkey_kong?page=${number}&perPage=${number}</td>
+                <td>get donkey kong games</td>
+            </tr>
+            <tr>
+                <td>F-ZERO</td>
+                <td>/api/v1/games/f-zero?page=${number}&perPage=${number}</td>
+                <td>get f-zero games</td>
+            </tr>
+            <tr>
+                <td>SPLATOON</td>
+                <td>/api/v1/games/splatoon?page=${number}&perPage=${number}</td>
+                <td>get splatoon games</td>
+            </tr>
+            <tr>
+                <td>MOTHER</td>
+                <td>/api/v1/games/mother?page=${number}&perPage=${number}</td>
+                <td>get mother games</td>
+            </tr>           
+        </tbody>
+      </table>
+      <div class="code-div">
+        <h3>Data Format</h3>
+        <div class="pre-div">
+          <pre>
+              <code>{
+                "_id": "5ec174a4fa8ade34c1580541",
+                "name": "Super Mario 64",
+                "image": "https://vignette.wikia.nocookie.net/nintendo/images/0/0f/Super_Mario_64_%28NA%29.png/revision/latest/scale-to-width-down/310?cb=20110703064718&path-prefix=en",
+                "developer": "Nintendo EAD",
+                "publisher": "Nintendo",
+                "genre": "Platformer",
+                "platform": "Nintendo 64, Virtual Console (Wii), Virtual Console (Wii U)",
+                "description": "Super Mario 64 (also called SM64) is a platformer game developed by Nintendo EAD and published by Nintendo. The game is considered to be one of the most influential titles from the fifth generation of video games. Released in 1996 as a launch title for the Nintendo 64 alongside Pilotwings 64, which helped drive initial sales of the console. As of January 7, 2017, it has sold over 11 million copies worldwide and is marked as the best selling Nintendo 64 game of all time. It is also the second most popular game on the Wii's Virtual Console after Super Mario Bros."
+              }</code>
+          </pre>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer>
+    <div>
+        <a href="https://www.github.com/cficht/"><img src="assets/github.png" alt="GitHub" width="50" height="50"/></a>
+        <a href="https://www.linkedin.com/in/chrisficht/"><img src="assets/linkedin.png" alt="Linked-in" width="50" height="50"/></a>
+    </div>
+    <div>
+        <p>By Chris Ficht</p>
+    </div>
+  </footer>
 </body>
 </html>
